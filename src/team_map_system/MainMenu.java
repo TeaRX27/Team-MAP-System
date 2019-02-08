@@ -5,6 +5,8 @@
  */
 package team_map_system;
 
+import javax.swing.*;
+import java.awt.*;
 /**
  *
  * @author Charles Bernardo
@@ -28,22 +30,248 @@ public class MainMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jSplitPane1 = new javax.swing.JSplitPane();
+        jPanel3 = new javax.swing.JPanel();
+        HomePanel = new javax.swing.JPanel();
+        HomeButton = new javax.swing.JLabel();
+        RegisterPanel = new javax.swing.JPanel();
+        RegisterButton = new javax.swing.JLabel();
+        EventsPanel = new javax.swing.JPanel();
+        EventsButton = new javax.swing.JLabel();
+        PrintPanel = new javax.swing.JPanel();
+        PrintButton = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(500, 600));
+
+        jSplitPane1.setDividerSize(0);
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new java.awt.GridLayout(4, 1));
+
+        HomePanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        HomeButton.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        HomeButton.setText("Home");
+        HomeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                HomeButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                HomeButtonMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout HomePanelLayout = new javax.swing.GroupLayout(HomePanel);
+        HomePanel.setLayout(HomePanelLayout);
+        HomePanelLayout.setHorizontalGroup(
+            HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(HomeButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+        );
+        HomePanelLayout.setVerticalGroup(
+            HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(HomeButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+        );
+
+        jPanel3.add(HomePanel);
+
+        RegisterPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        RegisterButton.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        RegisterButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RegisterButton.setText("Registration");
+        RegisterButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                RegisterButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                RegisterButtonMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout RegisterPanelLayout = new javax.swing.GroupLayout(RegisterPanel);
+        RegisterPanel.setLayout(RegisterPanelLayout);
+        RegisterPanelLayout.setHorizontalGroup(
+            RegisterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+        );
+        RegisterPanelLayout.setVerticalGroup(
+            RegisterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+        );
+
+        jPanel3.add(RegisterPanel);
+
+        EventsPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        EventsButton.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        EventsButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EventsButton.setText("Events");
+        EventsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                EventsButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                EventsButtonMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout EventsPanelLayout = new javax.swing.GroupLayout(EventsPanel);
+        EventsPanel.setLayout(EventsPanelLayout);
+        EventsPanelLayout.setHorizontalGroup(
+            EventsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(EventsButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+        );
+        EventsPanelLayout.setVerticalGroup(
+            EventsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(EventsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+        );
+
+        jPanel3.add(EventsPanel);
+
+        PrintPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        PrintButton.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        PrintButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        PrintButton.setText("Print");
+        PrintButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                PrintButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                PrintButtonMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PrintPanelLayout = new javax.swing.GroupLayout(PrintPanel);
+        PrintPanel.setLayout(PrintPanelLayout);
+        PrintPanelLayout.setHorizontalGroup(
+            PrintPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PrintButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+        );
+        PrintPanelLayout.setVerticalGroup(
+            PrintPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PrintButton, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+        );
+
+        jPanel3.add(PrintPanel);
+
+        jSplitPane1.setLeftComponent(jPanel3);
+
+        jPanel4.setLayout(new java.awt.CardLayout());
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 638, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 412, Short.MAX_VALUE)
+        );
+
+        jPanel4.add(jPanel7, "card2");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 638, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 412, Short.MAX_VALUE)
+        );
+
+        jPanel4.add(jPanel8, "card3");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 638, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 412, Short.MAX_VALUE)
+        );
+
+        jPanel4.add(jPanel9, "card4");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 638, Short.MAX_VALUE)
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 412, Short.MAX_VALUE)
+        );
+
+        jPanel4.add(jPanel10, "card5");
+
+        jSplitPane1.setRightComponent(jPanel4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jSplitPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(jSplitPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void HomeButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeButtonMouseEntered
+        // TODO add your handling code here:
+        HomePanel.setBackground(new java.awt.Color(66, 170, 244));
+    }//GEN-LAST:event_HomeButtonMouseEntered
+
+    private void RegisterButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterButtonMouseEntered
+        // TODO add your handling code here:
+        RegisterPanel.setBackground(new java.awt.Color(66, 170, 244));
+    }//GEN-LAST:event_RegisterButtonMouseEntered
+
+    private void EventsButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EventsButtonMouseEntered
+        // TODO add your handling code here:
+        EventsPanel.setBackground(new java.awt.Color(66, 170, 244));
+    }//GEN-LAST:event_EventsButtonMouseEntered
+
+    private void PrintButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PrintButtonMouseEntered
+        // TODO add your handling code here:
+        PrintPanel.setBackground(new java.awt.Color(66, 170, 244));
+    }//GEN-LAST:event_PrintButtonMouseEntered
+
+    private void HomeButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeButtonMouseExited
+        // TODO add your handling code here:
+        HomePanel.setBackground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_HomeButtonMouseExited
+
+    private void RegisterButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterButtonMouseExited
+        // TODO add your handling code here:
+         RegisterPanel.setBackground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_RegisterButtonMouseExited
+
+    private void EventsButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EventsButtonMouseExited
+        // TODO add your handling code here:
+         EventsPanel.setBackground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_EventsButtonMouseExited
+
+    private void PrintButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PrintButtonMouseExited
+        // TODO add your handling code here:
+         PrintPanel.setBackground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_PrintButtonMouseExited
 
     /**
      * @param args the command line arguments
@@ -81,6 +309,20 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel EventsButton;
+    private javax.swing.JPanel EventsPanel;
+    private javax.swing.JLabel HomeButton;
+    private javax.swing.JPanel HomePanel;
+    private javax.swing.JLabel PrintButton;
+    private javax.swing.JPanel PrintPanel;
+    private javax.swing.JLabel RegisterButton;
+    private javax.swing.JPanel RegisterPanel;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }
