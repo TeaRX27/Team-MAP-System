@@ -39,11 +39,15 @@ public class MainMenu extends javax.swing.JFrame {
         EventsButton = new javax.swing.JLabel();
         PrintPanel = new javax.swing.JPanel();
         PrintButton = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
+        MainPanel = new javax.swing.JPanel();
+        HomeMain = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        RegMain = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        EventMain = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        PrintMain = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(500, 600));
@@ -59,6 +63,9 @@ public class MainMenu extends javax.swing.JFrame {
         HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         HomeButton.setText("Home");
         HomeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HomeButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 HomeButtonMouseEntered(evt);
             }
@@ -86,6 +93,9 @@ public class MainMenu extends javax.swing.JFrame {
         RegisterButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RegisterButton.setText("Registration");
         RegisterButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegisterButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 RegisterButtonMouseEntered(evt);
             }
@@ -113,6 +123,9 @@ public class MainMenu extends javax.swing.JFrame {
         EventsButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EventsButton.setText("Events");
         EventsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EventsButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 EventsButtonMouseEntered(evt);
             }
@@ -140,6 +153,9 @@ public class MainMenu extends javax.swing.JFrame {
         PrintButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         PrintButton.setText("Print");
         PrintButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PrintButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 PrintButtonMouseEntered(evt);
             }
@@ -163,61 +179,93 @@ public class MainMenu extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(jPanel3);
 
-        jPanel4.setLayout(new java.awt.CardLayout());
+        MainPanel.setLayout(new java.awt.CardLayout());
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 638, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 412, Short.MAX_VALUE)
-        );
+        jLabel1.setText("ALAY");
 
-        jPanel4.add(jPanel7, "card2");
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 638, Short.MAX_VALUE)
+        javax.swing.GroupLayout HomeMainLayout = new javax.swing.GroupLayout(HomeMain);
+        HomeMain.setLayout(HomeMainLayout);
+        HomeMainLayout.setHorizontalGroup(
+            HomeMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HomeMainLayout.createSequentialGroup()
+                .addGap(259, 259, 259)
+                .addComponent(jLabel1)
+                .addContainerGap(354, Short.MAX_VALUE))
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 412, Short.MAX_VALUE)
+        HomeMainLayout.setVerticalGroup(
+            HomeMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HomeMainLayout.createSequentialGroup()
+                .addGap(165, 165, 165)
+                .addComponent(jLabel1)
+                .addContainerGap(233, Short.MAX_VALUE))
         );
 
-        jPanel4.add(jPanel8, "card3");
+        MainPanel.add(HomeMain, "card2");
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 638, Short.MAX_VALUE)
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 412, Short.MAX_VALUE)
-        );
+        jLabel2.setText("Ka");
 
-        jPanel4.add(jPanel9, "card4");
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 638, Short.MAX_VALUE)
+        javax.swing.GroupLayout RegMainLayout = new javax.swing.GroupLayout(RegMain);
+        RegMain.setLayout(RegMainLayout);
+        RegMainLayout.setHorizontalGroup(
+            RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RegMainLayout.createSequentialGroup()
+                .addGap(259, 259, 259)
+                .addComponent(jLabel2)
+                .addContainerGap(367, Short.MAX_VALUE))
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 412, Short.MAX_VALUE)
+        RegMainLayout.setVerticalGroup(
+            RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RegMainLayout.createSequentialGroup()
+                .addGap(165, 165, 165)
+                .addComponent(jLabel2)
+                .addContainerGap(233, Short.MAX_VALUE))
         );
 
-        jPanel4.add(jPanel10, "card5");
+        MainPanel.add(RegMain, "card3");
 
-        jSplitPane1.setRightComponent(jPanel4);
+        jLabel3.setText("Na");
+
+        javax.swing.GroupLayout EventMainLayout = new javax.swing.GroupLayout(EventMain);
+        EventMain.setLayout(EventMainLayout);
+        EventMainLayout.setHorizontalGroup(
+            EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EventMainLayout.createSequentialGroup()
+                .addGap(259, 259, 259)
+                .addComponent(jLabel3)
+                .addContainerGap(366, Short.MAX_VALUE))
+        );
+        EventMainLayout.setVerticalGroup(
+            EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EventMainLayout.createSequentialGroup()
+                .addGap(165, 165, 165)
+                .addComponent(jLabel3)
+                .addContainerGap(233, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(EventMain, "card4");
+
+        jLabel4.setText("Bukas");
+
+        javax.swing.GroupLayout PrintMainLayout = new javax.swing.GroupLayout(PrintMain);
+        PrintMain.setLayout(PrintMainLayout);
+        PrintMainLayout.setHorizontalGroup(
+            PrintMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PrintMainLayout.createSequentialGroup()
+                .addGap(259, 259, 259)
+                .addComponent(jLabel4)
+                .addContainerGap(351, Short.MAX_VALUE))
+        );
+        PrintMainLayout.setVerticalGroup(
+            PrintMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PrintMainLayout.createSequentialGroup()
+                .addGap(165, 165, 165)
+                .addComponent(jLabel4)
+                .addContainerGap(233, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(PrintMain, "card5");
+
+        jSplitPane1.setRightComponent(MainPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -273,6 +321,38 @@ public class MainMenu extends javax.swing.JFrame {
          PrintPanel.setBackground(new java.awt.Color(255,255,255));
     }//GEN-LAST:event_PrintButtonMouseExited
 
+    private void HomeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeButtonMouseClicked
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(HomeMain);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_HomeButtonMouseClicked
+
+    private void RegisterButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterButtonMouseClicked
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(RegMain);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_RegisterButtonMouseClicked
+
+    private void EventsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EventsButtonMouseClicked
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(EventMain);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_EventsButtonMouseClicked
+
+    private void PrintButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PrintButtonMouseClicked
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(PrintMain);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_PrintButtonMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -309,20 +389,24 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel EventMain;
     private javax.swing.JLabel EventsButton;
     private javax.swing.JPanel EventsPanel;
     private javax.swing.JLabel HomeButton;
+    private javax.swing.JPanel HomeMain;
     private javax.swing.JPanel HomePanel;
+    private javax.swing.JPanel MainPanel;
     private javax.swing.JLabel PrintButton;
+    private javax.swing.JPanel PrintMain;
     private javax.swing.JPanel PrintPanel;
+    private javax.swing.JPanel RegMain;
     private javax.swing.JLabel RegisterButton;
     private javax.swing.JPanel RegisterPanel;
-    private javax.swing.JPanel jPanel10;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }
