@@ -87,7 +87,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Lyn\Desktop\Sweng system\home2.png"/>
+                      <Image iconType="3" name="/team_map_system/home2.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value="Home"/>
                   </Properties>
@@ -126,7 +126,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Lyn\Desktop\Sweng system\reg2.png"/>
+                      <Image iconType="3" name="/team_map_system/reg2.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value="Registration"/>
                   </Properties>
@@ -165,7 +165,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Lyn\Desktop\Sweng system\events2.png"/>
+                      <Image iconType="3" name="/team_map_system/events2.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value="Events"/>
                   </Properties>
@@ -204,7 +204,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Lyn\Desktop\Sweng system\print2.png"/>
+                      <Image iconType="3" name="/team_map_system/print2.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value="Print"/>
                   </Properties>
