@@ -50,9 +50,10 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 600));
+        setPreferredSize(new java.awt.Dimension(1024, 768));
 
         jSplitPane1.setDividerSize(0);
+        jSplitPane1.setPreferredSize(new java.awt.Dimension(1024, 768));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new java.awt.GridLayout(4, 1));
@@ -194,14 +195,14 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(HomeMainLayout.createSequentialGroup()
                 .addGap(259, 259, 259)
                 .addComponent(jLabel1)
-                .addContainerGap(354, Short.MAX_VALUE))
+                .addContainerGap(572, Short.MAX_VALUE))
         );
         HomeMainLayout.setVerticalGroup(
             HomeMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomeMainLayout.createSequentialGroup()
                 .addGap(165, 165, 165)
                 .addComponent(jLabel1)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(587, Short.MAX_VALUE))
         );
 
         MainPanel.add(HomeMain, "card2");
@@ -215,14 +216,14 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(RegMainLayout.createSequentialGroup()
                 .addGap(259, 259, 259)
                 .addComponent(jLabel2)
-                .addContainerGap(367, Short.MAX_VALUE))
+                .addContainerGap(585, Short.MAX_VALUE))
         );
         RegMainLayout.setVerticalGroup(
             RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RegMainLayout.createSequentialGroup()
                 .addGap(165, 165, 165)
                 .addComponent(jLabel2)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(587, Short.MAX_VALUE))
         );
 
         MainPanel.add(RegMain, "card3");
@@ -236,14 +237,14 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(EventMainLayout.createSequentialGroup()
                 .addGap(259, 259, 259)
                 .addComponent(jLabel3)
-                .addContainerGap(366, Short.MAX_VALUE))
+                .addContainerGap(584, Short.MAX_VALUE))
         );
         EventMainLayout.setVerticalGroup(
             EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EventMainLayout.createSequentialGroup()
                 .addGap(165, 165, 165)
                 .addComponent(jLabel3)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(587, Short.MAX_VALUE))
         );
 
         MainPanel.add(EventMain, "card4");
@@ -257,14 +258,14 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(PrintMainLayout.createSequentialGroup()
                 .addGap(259, 259, 259)
                 .addComponent(jLabel4)
-                .addContainerGap(351, Short.MAX_VALUE))
+                .addContainerGap(569, Short.MAX_VALUE))
         );
         PrintMainLayout.setVerticalGroup(
             PrintMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PrintMainLayout.createSequentialGroup()
                 .addGap(165, 165, 165)
                 .addComponent(jLabel4)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(587, Short.MAX_VALUE))
         );
 
         MainPanel.add(PrintMain, "card5");
@@ -275,11 +276,11 @@ public class MainMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
