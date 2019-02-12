@@ -61,7 +61,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         HomeButton.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        HomeButton.setText("Home");
+        HomeButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lyn\\Desktop\\Sweng system\\home2.png")); // NOI18N
+        HomeButton.setToolTipText("Home");
         HomeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 HomeButtonMouseClicked(evt);
@@ -78,11 +79,11 @@ public class MainMenu extends javax.swing.JFrame {
         HomePanel.setLayout(HomePanelLayout);
         HomePanelLayout.setHorizontalGroup(
             HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(HomeButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+            .addComponent(HomeButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         HomePanelLayout.setVerticalGroup(
             HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(HomeButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+            .addComponent(HomeButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel3.add(HomePanel);
@@ -91,7 +92,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         RegisterButton.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         RegisterButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RegisterButton.setText("Registration");
+        RegisterButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lyn\\Desktop\\Sweng system\\reg2.png")); // NOI18N
+        RegisterButton.setToolTipText("Registration");
         RegisterButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RegisterButtonMouseClicked(evt);
@@ -108,11 +110,11 @@ public class MainMenu extends javax.swing.JFrame {
         RegisterPanel.setLayout(RegisterPanelLayout);
         RegisterPanelLayout.setHorizontalGroup(
             RegisterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+            .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         RegisterPanelLayout.setVerticalGroup(
             RegisterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+            .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel3.add(RegisterPanel);
@@ -121,7 +123,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         EventsButton.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         EventsButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        EventsButton.setText("Events");
+        EventsButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lyn\\Desktop\\Sweng system\\events2.png")); // NOI18N
+        EventsButton.setToolTipText("Events");
         EventsButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 EventsButtonMouseClicked(evt);
@@ -138,11 +141,11 @@ public class MainMenu extends javax.swing.JFrame {
         EventsPanel.setLayout(EventsPanelLayout);
         EventsPanelLayout.setHorizontalGroup(
             EventsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EventsButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+            .addComponent(EventsButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         EventsPanelLayout.setVerticalGroup(
             EventsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EventsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+            .addComponent(EventsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel3.add(EventsPanel);
@@ -151,7 +154,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         PrintButton.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         PrintButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        PrintButton.setText("Print");
+        PrintButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lyn\\Desktop\\Sweng system\\print2.png")); // NOI18N
+        PrintButton.setToolTipText("Print");
         PrintButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PrintButtonMouseClicked(evt);
@@ -168,11 +172,11 @@ public class MainMenu extends javax.swing.JFrame {
         PrintPanel.setLayout(PrintPanelLayout);
         PrintPanelLayout.setHorizontalGroup(
             PrintPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PrintButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+            .addComponent(PrintButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         PrintPanelLayout.setVerticalGroup(
             PrintPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PrintButton, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+            .addComponent(PrintButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel3.add(PrintPanel);
