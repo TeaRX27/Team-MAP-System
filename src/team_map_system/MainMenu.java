@@ -61,7 +61,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         HomeButton.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         HomeButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        HomeButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lyn\\Desktop\\Sweng system\\home2.png")); // NOI18N
+        HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/team_map_system/home2.png"))); // NOI18N
         HomeButton.setToolTipText("Home");
         HomeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -92,7 +92,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         RegisterButton.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         RegisterButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RegisterButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lyn\\Desktop\\Sweng system\\reg2.png")); // NOI18N
+        RegisterButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/team_map_system/reg2.png"))); // NOI18N
         RegisterButton.setToolTipText("Registration");
         RegisterButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -123,7 +123,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         EventsButton.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         EventsButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        EventsButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lyn\\Desktop\\Sweng system\\events2.png")); // NOI18N
+        EventsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/team_map_system/events2.png"))); // NOI18N
         EventsButton.setToolTipText("Events");
         EventsButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -154,7 +154,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         PrintButton.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         PrintButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        PrintButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lyn\\Desktop\\Sweng system\\print2.png")); // NOI18N
+        PrintButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/team_map_system/print2.png"))); // NOI18N
         PrintButton.setToolTipText("Print");
         PrintButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
