@@ -5,6 +5,9 @@
  */
 package team_map_system;
 
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author XCree
@@ -43,13 +46,19 @@ public class MainMenu2 extends javax.swing.JDialog {
         HomeMain = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         RegMain = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         EventMain = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         PrintMain = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jSplitPane1.setDividerSize(0);
         jSplitPane1.setPreferredSize(new java.awt.Dimension(1024, 768));
@@ -142,23 +151,36 @@ public class MainMenu2 extends javax.swing.JDialog {
 
         MainPanel.add(HomeMain, "card2");
 
-        jLabel2.setText("Ka");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout RegMainLayout = new javax.swing.GroupLayout(RegMain);
         RegMain.setLayout(RegMainLayout);
         RegMainLayout.setHorizontalGroup(
             RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RegMainLayout.createSequentialGroup()
-                .addGap(259, 259, 259)
-                .addComponent(jLabel2)
-                .addContainerGap(585, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE)
+                .addContainerGap())
         );
         RegMainLayout.setVerticalGroup(
             RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RegMainLayout.createSequentialGroup()
-                .addGap(165, 165, 165)
-                .addComponent(jLabel2)
-                .addContainerGap(587, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(357, Short.MAX_VALUE))
         );
 
         MainPanel.add(RegMain, "card3");
@@ -246,6 +268,25 @@ public class MainMenu2 extends javax.swing.JDialog {
         MainPanel.add(RegMain);
         MainPanel.repaint();
         MainPanel.revalidate();
+        String userStatement = "Select * From Members";
+			// Qualify that it is a SELECT statement.
+			if (userStatement.trim().toUpperCase().startsWith("SELECT"))
+			{
+				// Create a CoffeeDBQuery object for the query.
+                                RegisterLoad dbQuery = new RegisterLoad(userStatement);
+				// Get the column names.
+				String[] colNames = dbQuery.getColumnNames();
+				// Get the table data.
+				String[][] data = dbQuery.getTableData();
+				// Display the results in a table.
+                                DefaultTableModel model = new DefaultTableModel(data,colNames);
+                                jTable1.setModel(model);
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "Only enter SELECT statements.");
+			}
+        
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
@@ -262,6 +303,15 @@ public class MainMenu2 extends javax.swing.JDialog {
         MainPanel.repaint();
         MainPanel.revalidate();
     }//GEN-LAST:event_jToggleButton5ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        jToggleButton2.setSelected(true);
+        MainPanel.removeAll();
+        MainPanel.add(HomeMain);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_formWindowOpened
   Boolean homesel = false ,regsel = false,eventssel = false,printsel = false;
     /**
      * @param args the command line arguments
@@ -317,11 +367,12 @@ public class MainMenu2 extends javax.swing.JDialog {
     private javax.swing.JPanel RegisterPanel;
     private javax.swing.ButtonGroup SidePanel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;
