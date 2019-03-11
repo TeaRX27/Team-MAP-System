@@ -40,8 +40,6 @@ public class MainMenu2 extends javax.swing.JDialog {
         jToggleButton3 = new javax.swing.JToggleButton();
         EventsPanel = new javax.swing.JPanel();
         jToggleButton4 = new javax.swing.JToggleButton();
-        PrintPanel = new javax.swing.JPanel();
-        jToggleButton5 = new javax.swing.JToggleButton();
         MainPanel = new javax.swing.JPanel();
         HomeMain = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -49,9 +47,9 @@ public class MainMenu2 extends javax.swing.JDialog {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         EventMain = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        PrintMain = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -64,7 +62,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         jSplitPane1.setPreferredSize(new java.awt.Dimension(1024, 768));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setLayout(new java.awt.GridLayout(4, 1));
+        jPanel3.setLayout(new java.awt.GridLayout(3, 1));
 
         HomePanel.setBackground(new java.awt.Color(255, 255, 255));
         HomePanel.setLayout(new java.awt.CardLayout());
@@ -110,21 +108,6 @@ public class MainMenu2 extends javax.swing.JDialog {
         EventsPanel.add(jToggleButton4, "card2");
 
         jPanel3.add(EventsPanel);
-
-        PrintPanel.setBackground(new java.awt.Color(255, 255, 255));
-        PrintPanel.setLayout(new java.awt.CardLayout());
-
-        SidePanel.add(jToggleButton5);
-        jToggleButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/team_map_system/print2.png"))); // NOI18N
-        jToggleButton5.setText(null);
-        jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton5ActionPerformed(evt);
-            }
-        });
-        PrintPanel.add(jToggleButton5, "card2");
-
-        jPanel3.add(PrintPanel);
 
         jSplitPane1.setLeftComponent(jPanel3);
 
@@ -185,47 +168,46 @@ public class MainMenu2 extends javax.swing.JDialog {
 
         MainPanel.add(RegMain, "card3");
 
-        jLabel3.setText("Na");
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setText("Load Event");
 
         javax.swing.GroupLayout EventMainLayout = new javax.swing.GroupLayout(EventMain);
         EventMain.setLayout(EventMainLayout);
         EventMainLayout.setHorizontalGroup(
             EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EventMainLayout.createSequentialGroup()
-                .addGap(259, 259, 259)
-                .addComponent(jLabel3)
-                .addContainerGap(584, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(EventMainLayout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE))
+                .addContainerGap())
         );
         EventMainLayout.setVerticalGroup(
             EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EventMainLayout.createSequentialGroup()
-                .addGap(165, 165, 165)
-                .addComponent(jLabel3)
-                .addContainerGap(587, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
         MainPanel.add(EventMain, "card4");
-
-        jLabel4.setText("Bukas");
-
-        javax.swing.GroupLayout PrintMainLayout = new javax.swing.GroupLayout(PrintMain);
-        PrintMain.setLayout(PrintMainLayout);
-        PrintMainLayout.setHorizontalGroup(
-            PrintMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PrintMainLayout.createSequentialGroup()
-                .addGap(259, 259, 259)
-                .addComponent(jLabel4)
-                .addContainerGap(569, Short.MAX_VALUE))
-        );
-        PrintMainLayout.setVerticalGroup(
-            PrintMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PrintMainLayout.createSequentialGroup()
-                .addGap(165, 165, 165)
-                .addComponent(jLabel4)
-                .addContainerGap(587, Short.MAX_VALUE))
-        );
-
-        MainPanel.add(PrintMain, "card5");
 
         jSplitPane1.setRightComponent(MainPanel);
 
@@ -296,14 +278,6 @@ public class MainMenu2 extends javax.swing.JDialog {
         MainPanel.revalidate();        // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton4ActionPerformed
 
-    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
-        // TODO add your handling code here:      
-        MainPanel.removeAll();
-        MainPanel.add(PrintMain);
-        MainPanel.repaint();
-        MainPanel.revalidate();
-    }//GEN-LAST:event_jToggleButton5ActionPerformed
-
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         jToggleButton2.setSelected(true);
@@ -361,21 +335,19 @@ public class MainMenu2 extends javax.swing.JDialog {
     private javax.swing.JPanel HomeMain;
     private javax.swing.JPanel HomePanel;
     private javax.swing.JPanel MainPanel;
-    private javax.swing.JPanel PrintMain;
-    private javax.swing.JPanel PrintPanel;
     private javax.swing.JPanel RegMain;
     private javax.swing.JPanel RegisterPanel;
     private javax.swing.ButtonGroup SidePanel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;
-    private javax.swing.JToggleButton jToggleButton5;
     // End of variables declaration//GEN-END:variables
 }

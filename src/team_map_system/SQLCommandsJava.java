@@ -31,4 +31,28 @@ public class SQLCommandsJava {
 			System.out.println("ERROR: " + ex.getMessage());
 		}
     }
+    public static String Getpassword(String User) throws SQLException
+	{
+            
+            final String DB_URL = "jdbc:mysql://localhost:3306/teammap_db";
+           Connection conn = DriverManager.getConnection(DB_URL, "root", "");
+           Statement stmt = conn.createStatement();
+		String Password; // Flag
+		// Create a SELECT statement to get the specified
+		// row from the Coffee table.
+		String sqlStatement = "SELECT password FROM User WHERE User = '" + User + "'";
+		// Send the SELECT statement to the DBMS.
+		ResultSet result = stmt.executeQuery(sqlStatement);
+		// Display the contents of the result set.
+		if (result.next())
+		{
+			Password = result.getString("password");
+		}
+		else
+		{
+			// Indicate the product was not found.
+			Password = "";
+		}
+		return Password;
+	}
 }

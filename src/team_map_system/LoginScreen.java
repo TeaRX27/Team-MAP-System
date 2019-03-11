@@ -107,8 +107,7 @@ public class LoginScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-                this.setVisible(false);
+        // TODO add your handling code here:this.setVisible(false);
      MainMenu2 dialog = new MainMenu2(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
