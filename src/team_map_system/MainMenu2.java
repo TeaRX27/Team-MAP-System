@@ -5,6 +5,11 @@
  */
 package team_map_system;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
@@ -45,7 +50,12 @@ public class MainMenu2 extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         RegMain = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        memberTable = new javax.swing.JTable();
+        memberTable = new javax.swing.JTable(){
+            public boolean isCellEditable(int row,int col)
+            {
+                return false;
+            }
+        };
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -168,20 +178,11 @@ public class MainMenu2 extends javax.swing.JDialog {
         RegMain.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         memberTable.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        memberTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
+        memberTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         memberTable.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         memberTable.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(memberTable);
+        memberTable.getTableHeader().setReorderingAllowed(false);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Facebook Name:");
@@ -251,10 +252,20 @@ public class MainMenu2 extends javax.swing.JDialog {
         contactTextField.setFont(modelSpinner.getFont());
 
         RegisterButton.setText("Register");
+        RegisterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegisterButtonActionPerformed(evt);
+            }
+        });
 
         ClearButton.setText("Clear");
 
         LoadButton.setText("Load");
+        LoadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoadButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -344,7 +355,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel9)
                                         .addGap(18, 18, 18)
-                                        .addComponent(colorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(colorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(RegMainLayout.createSequentialGroup()
                                         .addComponent(jLabel10)
                                         .addGap(18, 18, 18)
@@ -502,7 +513,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         MainPanel.add(RegMain);
         MainPanel.repaint();
         MainPanel.revalidate();
-        String userStatement = "Select * From Members";
+        String userStatement = "Select ID,Name From Members";
 			// Qualify that it is a SELECT statement.
 			if (userStatement.trim().toUpperCase().startsWith("SELECT"))
 			{
@@ -553,6 +564,53 @@ public class MainMenu2 extends javax.swing.JDialog {
             companyTextField.setVisible(true);
         }
     }//GEN-LAST:event_occupationTextFieldActionPerformed
+
+    private void LoadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadButtonActionPerformed
+
+        // TODO add your handling code here:
+         String UID;
+        if(LoadButton.isSelected())
+        {
+           if(memberTable.getSelectedRow()!=-1)
+           {
+              
+               RegisterButton.setText("Update");
+               UID = memberTable.getValueAt(memberTable.getSelectedRow(), 0).toString();
+               System.out.print(UID);
+               try
+               {
+                   Call(UID);
+               }
+               catch(Exception ex)
+               {
+                   JOptionPane.showMessageDialog(null, ex.getMessage());
+           }
+           }
+           else
+           {
+               LoadButton.setSelected(false);
+               JOptionPane.showMessageDialog(null,"No selected member");
+           }
+        }
+        else
+        {
+               RegisterButton.setText("Register");
+               UID = "";
+               memberTable.clearSelection(); 
+       }
+    }//GEN-LAST:event_LoadButtonActionPerformed
+
+    private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
+        // TODO add your handling code here:
+        if(LoadButton.isSelected())
+        {
+            SQLCommandsJava.insert("Insert Query Here");
+        }
+        else
+        {
+            SQLCommandsJava.update("Insert Query Here");
+        }
+    }//GEN-LAST:event_RegisterButtonActionPerformed
   Boolean homesel = false ,regsel = false,eventssel = false,printsel = false;
     /**
      * @param args the command line arguments
@@ -595,7 +653,42 @@ public class MainMenu2 extends javax.swing.JDialog {
             }
         });
     }
-
+ public boolean Call(String UID) throws SQLException
+	{
+             final String DB_URL = "jdbc:mysql://localhost:3306/teammap_db";
+           Connection conn = DriverManager.getConnection(DB_URL, "root", "");
+                 Statement stmt = conn.createStatement();
+		String Password; // Flag
+		// Create a SELECT statement to get the specified
+		// row from the Coffee table.
+		String sqlStatement = "SELECT * FROM members WHERE ID = '" + UID + "'";
+		// Send the SELECT statement to the DBMS.
+		ResultSet result = stmt.executeQuery(sqlStatement);
+		boolean UIDFound; // Flag
+		if (result.next())
+		{
+			// Display the product.
+			nameTextField.setText(result.getString("Name"));
+                        fbnameTextField.setText(result.getString("FB_Name"));
+                        addressTextField.setText(result.getString("Address"));
+                        emailTextField.setText(result.getString("Email"));
+                        plateTextField.setText(result.getString("Plate"));
+                        //modelSpinner1.setValue(result.getString("Groups"));
+                       // modelSpinner.setValue(result.getString("Model"));
+                        modelTextField.setText(result.getString("ModelYear"));
+                        colorTextField.setText(result.getString("Color"));
+                        //add Remaining TextFields here
+                       
+			
+			UIDFound = true;
+		}
+		else
+		{
+			// Indicate the product was not found.
+			UIDFound = false;
+		}
+		return UIDFound;
+	}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ClearButton;
     private javax.swing.JPanel EventMain;
