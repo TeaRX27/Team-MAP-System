@@ -88,33 +88,37 @@ public class MainMenu2 extends javax.swing.JDialog {
         modelSpinner1 = new javax.swing.JSpinner();
         EventMain = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable(){
+        EventList = new javax.swing.JTable(){
             public boolean isCellEditable(int row,int col)
             {
                 return false;
             }
         };
-        jButton1 = new javax.swing.JButton();
+        LoadEventButton = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        EventName = new javax.swing.JTextField();
+        EventLocation = new javax.swing.JTextField();
+        CreateButton = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable(){
+        AttendList = new javax.swing.JTable(){
             public boolean isCellEditable(int row,int col)
             {
                 return false;
             }
         };
         jLabel17 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        Attendees = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        UIDBox = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
+        Delete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -456,8 +460,8 @@ public class MainMenu2 extends javax.swing.JDialog {
         EventMain.setMaximumSize(new java.awt.Dimension(856, 766));
         EventMain.setPreferredSize(new java.awt.Dimension(856, 766));
 
-        jTable2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        EventList.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EventList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -468,17 +472,24 @@ public class MainMenu2 extends javax.swing.JDialog {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(EventList);
         memberTable.getTableHeader().setReorderingAllowed(false);
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("Load Event");
+        LoadEventButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        LoadEventButton.setText("Load Event");
+        LoadEventButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoadEventButtonActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setText("Clear");
-
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton3.setText("Registration");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jPanel2.setMaximumSize(new java.awt.Dimension(427, 494));
         jPanel2.setMinimumSize(new java.awt.Dimension(427, 494));
@@ -486,14 +497,17 @@ public class MainMenu2 extends javax.swing.JDialog {
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel15.setText("Event Name:");
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setText("jTextField1");
+        EventName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField2.setText("jTextField2");
+        EventLocation.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton4.setText("Create Event");
+        CreateButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        CreateButton.setText("Create Event");
+        CreateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreateButtonActionPerformed(evt);
+            }
+        });
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel18.setText("Event Location:");
@@ -502,17 +516,17 @@ public class MainMenu2 extends javax.swing.JDialog {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(147, 147, 147)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(157, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
-                    .addComponent(jTextField2)
+                    .addComponent(EventName, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
+                    .addComponent(EventLocation)
                     .addComponent(jLabel15))
                 .addGap(23, 23, 23))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(147, 147, 147)
+                .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(47, 47, 47)
@@ -525,12 +539,12 @@ public class MainMenu2 extends javax.swing.JDialog {
                 .addGap(54, 54, 54)
                 .addComponent(jLabel15)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EventName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(94, 94, 94)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EventLocation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(95, 95, 95)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(102, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(184, 184, 184)
@@ -541,8 +555,8 @@ public class MainMenu2 extends javax.swing.JDialog {
         jPanel4.setMaximumSize(new java.awt.Dimension(391, 494));
         jPanel4.setMinimumSize(new java.awt.Dimension(391, 494));
 
-        jTable1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        AttendList.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        AttendList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -553,43 +567,75 @@ public class MainMenu2 extends javax.swing.JDialog {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(jTable1);
+        jScrollPane3.setViewportView(AttendList);
         memberTable.getTableHeader().setReorderingAllowed(false);
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel17.setText("Total Attendees:");
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel19.setText("0");
+        Attendees.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Attendees.setText("0");
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel16.setText("UID:");
+
+        UIDBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton5.setText("Register");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel17)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel19)
-                .addGap(183, 183, 183))
+                .addComponent(Attendees)
+                .addGap(181, 181, 181))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addGap(147, 147, 147))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addGap(18, 18, 18)
+                        .addComponent(UIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(UIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel17)
-                .addGap(39, 39, 39)
-                .addComponent(jLabel19)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(Attendees)
+                .addContainerGap())
         );
+
+        Delete.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Delete.setText("Delete Event");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout EventMainLayout = new javax.swing.GroupLayout(EventMain);
         EventMain.setLayout(EventMainLayout);
@@ -598,18 +644,20 @@ public class MainMenu2 extends javax.swing.JDialog {
             .addGroup(EventMainLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
                     .addGroup(EventMainLayout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(EventMainLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(234, 234, 234)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 824, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EventMainLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(LoadEventButton, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(164, 164, 164)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
         );
         EventMainLayout.setVerticalGroup(
             EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -618,9 +666,9 @@ public class MainMenu2 extends javax.swing.JDialog {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LoadEventButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -675,7 +723,7 @@ public class MainMenu2 extends javax.swing.JDialog {
 			if (userStatement.trim().toUpperCase().startsWith("SELECT"))
 			{
 				// Create a CoffeeDBQuery object for the query.
-                                RegisterLoad dbQuery = new RegisterLoad(userStatement);
+                                LoadMemberEventList dbQuery = new LoadMemberEventList(userStatement);
 				// Get the column names.
 				String[] colNames = dbQuery.getColumnNames();
 				// Get the table data.
@@ -695,6 +743,20 @@ public class MainMenu2 extends javax.swing.JDialog {
         MainPanel.add(EventMain);
         MainPanel.repaint();
         MainPanel.revalidate();        // TODO add your handling code here:
+           String userStatement = "Select * From Events";
+			// Qualify that it is a SELECT statement.
+			if (userStatement.trim().toUpperCase().startsWith("SELECT"))
+			{
+				// Create a CoffeeDBQuery object for the query.
+                                LoadMemberEventList dbQuery = new LoadMemberEventList(userStatement);
+				// Get the column names.
+				String[] colNames = dbQuery.getColumnNames();
+				// Get the table data.
+				String[][] data = dbQuery.getTableData();
+				// Display the results in a table.
+                                DefaultTableModel model = new DefaultTableModel(data,colNames);
+                                EventList.setModel(model);
+                        }
     }//GEN-LAST:event_jToggleButton4ActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -768,6 +830,129 @@ public class MainMenu2 extends javax.swing.JDialog {
             SQLCommandsJava.update("Insert Query Here");
         }
     }//GEN-LAST:event_RegisterButtonActionPerformed
+
+    private void CreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateButtonActionPerformed
+        // TODO add your handling code here:
+            if(EventName.getText().equals("")&&EventLocation.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog(null,"Event Name and Event Location Must Mot Be Empty");
+            }
+            else
+            {
+                SQLCommandsJava.insert("Insert Into Events Values ('"+EventName.getText()+"','"+EventLocation.getText()+"');");
+                SQLCommandsJava.CreateEvent(EventName.getText());
+                           String userStatement = "Select * From Events";
+			// Qualify that it is a SELECT statement.
+			if (userStatement.trim().toUpperCase().startsWith("SELECT"))
+			{
+				// Create a CoffeeDBQuery object for the query.
+                                LoadMemberEventList dbQuery = new LoadMemberEventList(userStatement);
+				// Get the column names.
+				String[] colNames = dbQuery.getColumnNames();
+				// Get the table data.
+				String[][] data = dbQuery.getTableData();
+				// Display the results in a table.
+                                DefaultTableModel model = new DefaultTableModel(data,colNames);
+                                EventList.setModel(model);
+                        }
+            }
+    }//GEN-LAST:event_CreateButtonActionPerformed
+
+    private void LoadEventButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadEventButtonActionPerformed
+        // TODO add your handling code here:
+        String Event,Location;
+         if(EventList.getSelectedRow()!=-1)
+           {
+               Event  = EventList.getValueAt(EventList.getSelectedRow(), 0).toString();
+                Location  = EventList.getValueAt(EventList.getSelectedRow(), 1).toString();
+               EventName.setText(Event);
+               EventLocation.setText(Location);
+                EventName.setEnabled(false);
+               EventLocation.setEnabled(false);
+                   String userStatement = "Select * From "+EventName.getText();
+			// Qualify that it is a SELECT statement.
+			if (userStatement.trim().toUpperCase().startsWith("SELECT"))
+			{
+				// Create a CoffeeDBQuery object for the query.
+                                LoadEventAttendance dbQuery = new LoadEventAttendance(userStatement);
+				// Get the column names.
+				String[] colNames = dbQuery.getColumnNames();
+				// Get the table data.
+				String[][] data = dbQuery.getTableData();
+				// Display the results in a table.
+                                DefaultTableModel model = new DefaultTableModel(data,colNames);
+                                AttendList.setModel(model);
+                        }
+           }
+           else
+           {
+               JOptionPane.showMessageDialog(null,"No selected Event");
+           }
+    }//GEN-LAST:event_LoadEventButtonActionPerformed
+
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
+        // TODO add your handling code here:
+         if(EventList.getSelectedRow()!=-1)
+           {
+               SQLCommandsJava.delete("Delete From events where Event = '"
+                       +EventList.getValueAt(EventList.getSelectedRow(), 0).toString()+"'");
+               SQLCommandsJava.dropevent("Drop Table `"+EventList.getValueAt(EventList.getSelectedRow(), 0).toString()+"`");
+           }
+           else
+           {
+               JOptionPane.showMessageDialog(null,"No selected Event");
+           }
+    }//GEN-LAST:event_DeleteActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+           EventName.setText("");
+               EventLocation.setText("");
+                EventName.setEnabled(true);
+               EventLocation.setEnabled(true);
+               EventList.clearSelection();
+               UIDBox.setText("");
+               AttendList.setModel(new javax.swing.table.DefaultTableModel(
+    new Object [][] {
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null}
+    },
+    new String [] {
+        "Title 1", "Title 2", "Title 3", "Title 4"
+    }
+));
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        
+        try
+    {
+   AttendRegister.Call(UIDBox.getText(),EventName.getText());
+    }
+    catch (SQLException ex)
+    {
+    ex.printStackTrace();
+    }
+        Attendees.setText(AttendRegister.Count);
+            String userStatement = "Select * From "+EventName.getText();
+			// Qualify that it is a SELECT statement.
+			if (userStatement.trim().toUpperCase().startsWith("SELECT"))
+			{
+				// Create a CoffeeDBQuery object for the query.
+                                LoadEventAttendance dbQuery = new LoadEventAttendance(userStatement);
+				// Get the column names.
+				String[] colNames = dbQuery.getColumnNames();
+				// Get the table data.
+				String[][] data = dbQuery.getTableData();
+				// Display the results in a table.
+                                DefaultTableModel model = new DefaultTableModel(data,colNames);
+                                AttendList.setModel(model);
+                        }
+                               
+    }//GEN-LAST:event_jButton5ActionPerformed
   Boolean homesel = false ,regsel = false,eventssel = false,printsel = false;
     /**
      * @param args the command line arguments
@@ -847,27 +1032,34 @@ public class MainMenu2 extends javax.swing.JDialog {
 		return UIDFound;
 	}
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable AttendList;
+    private javax.swing.JLabel Attendees;
     private javax.swing.JButton ClearButton;
+    private javax.swing.JButton CreateButton;
+    private javax.swing.JButton Delete;
+    private javax.swing.JTable EventList;
+    private javax.swing.JTextField EventLocation;
     private javax.swing.JPanel EventMain;
+    private javax.swing.JTextField EventName;
     private javax.swing.JPanel EventsPanel;
     private javax.swing.JPanel HomeMain;
     private javax.swing.JPanel HomePanel;
     private javax.swing.JToggleButton LoadButton;
+    private javax.swing.JButton LoadEventButton;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JPanel RegMain;
     private javax.swing.JButton RegisterButton;
     private javax.swing.JPanel RegisterPanel;
     private javax.swing.ButtonGroup SidePanel;
+    private javax.swing.JTextField UIDBox;
     private javax.swing.JTextField addressTextField;
     private javax.swing.JTextField colorTextField;
     private javax.swing.JTextField companyTextField;
     private javax.swing.JTextField contactTextField;
     private javax.swing.JTextField emailTextField;
     private javax.swing.JTextField fbnameTextField;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -875,9 +1067,9 @@ public class MainMenu2 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -894,10 +1086,6 @@ public class MainMenu2 extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;
