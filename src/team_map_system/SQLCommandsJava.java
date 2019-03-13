@@ -31,28 +31,48 @@ public class SQLCommandsJava {
 			System.out.println("ERROR: " + ex.getMessage());
 		}
     }
-    public static String Getpassword(String User) throws SQLException
-	{
-            
-            final String DB_URL = "jdbc:mysql://localhost:3306/teammap_db";
-           Connection conn = DriverManager.getConnection(DB_URL, "root", "");
-           Statement stmt = conn.createStatement();
-		String Password; // Flag
-		// Create a SELECT statement to get the specified
-		// row from the Coffee table.
-		String sqlStatement = "SELECT password FROM User WHERE User = '" + User + "'";
-		// Send the SELECT statement to the DBMS.
-		ResultSet result = stmt.executeQuery(sqlStatement);
-		// Display the contents of the result set.
-		if (result.next())
+  public static void insert(String Query)
+  {
+          final String DB_URL = "jdbc:mysql://localhost:3306/teammap_db";
+      try
 		{
-			Password = result.getString("password");
+			// Create a connection to the database.
+			Connection conn = DriverManager.getConnection(DB_URL, "root", "root");
+			Statement stmt = conn.createStatement();
+			// Create a string with an INSERT statement.
+			String sqlStatement = Query;
+			// Send the statement to the DBMS.
+			int rows = stmt.executeUpdate(sqlStatement);
+			// Display the results.
+			System.out.println(rows + " row(s) added to the table.");
+			// Close the connection.
+			conn.close();
 		}
-		else
+		catch(Exception ex)
 		{
-			// Indicate the product was not found.
-			Password = "";
+			System.out.println("ERROR: " + ex.getMessage());
 		}
-		return Password;
-	}
+  }
+  public static void update(String Query)
+  {
+          final String DB_URL = "jdbc:mysql://localhost:3306/teammap_db";
+      try
+		{
+			// Create a connection to the database.
+			Connection conn = DriverManager.getConnection(DB_URL, "root", "root");
+			Statement stmt = conn.createStatement();
+			// Create a string with an INSERT statement.
+			String sqlStatement = Query;
+			// Send the statement to the DBMS.
+			int rows = stmt.executeUpdate(sqlStatement);
+			// Display the results.
+			System.out.println(rows + " row(s) updated");
+			// Close the connection.
+			conn.close();
+		}
+		catch(Exception ex)
+		{
+			System.out.println("ERROR: " + ex.getMessage());
+		}
+  }
 }
