@@ -88,7 +88,12 @@ public class MainMenu2 extends javax.swing.JDialog {
         modelSpinner1 = new javax.swing.JSpinner();
         EventMain = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        jTable2 = new javax.swing.JTable(){
+            public boolean isCellEditable(int row,int col)
+            {
+                return false;
+            }
+        };
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -100,7 +105,12 @@ public class MainMenu2 extends javax.swing.JDialog {
         jLabel18 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable(){
+            public boolean isCellEditable(int row,int col)
+            {
+                return false;
+            }
+        };
         jLabel17 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
 
@@ -459,6 +469,7 @@ public class MainMenu2 extends javax.swing.JDialog {
             }
         ));
         jScrollPane2.setViewportView(jTable2);
+        memberTable.getTableHeader().setReorderingAllowed(false);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setText("Load Event");
@@ -543,6 +554,7 @@ public class MainMenu2 extends javax.swing.JDialog {
             }
         ));
         jScrollPane3.setViewportView(jTable1);
+        memberTable.getTableHeader().setReorderingAllowed(false);
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel17.setText("Total Attendees:");
