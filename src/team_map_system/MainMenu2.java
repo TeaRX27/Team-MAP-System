@@ -85,13 +85,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         ClearButton = new javax.swing.JButton();
         LoadButton = new javax.swing.JToggleButton();
         jLabel14 = new javax.swing.JLabel();
-        groupSpinner = new javax.swing.JSpinner();
-        jLabel19 = new javax.swing.JLabel();
-        UIDTextField = new javax.swing.JTextField();
-        jLabel20 = new javax.swing.JLabel();
-        legitCheckBox = new javax.swing.JCheckBox();
-        jLabel21 = new javax.swing.JLabel();
-        bdayTextField = new javax.swing.JFormattedTextField();
+        modelSpinner1 = new javax.swing.JSpinner();
         EventMain = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         EventList = new javax.swing.JTable(){
@@ -239,7 +233,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         jLabel8.setText("Model Year:");
 
         modelSpinner.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        modelSpinner.setModel(new javax.swing.SpinnerListModel(new String[] {"GLX", "GLS", "Super Sports", "GLS SPORTS"}));
+        modelSpinner.setModel(new javax.swing.SpinnerListModel(new String[] {"GX", "GLX", "GLS Sport", "Super Sport"}));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setText("Color:");
@@ -306,12 +300,15 @@ public class MainMenu2 extends javax.swing.JDialog {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                    .addComponent(LoadButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ClearButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(44, 44, 44))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ClearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegisterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LoadButton))
+                .addContainerGap())
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {ClearButton, LoadButton, RegisterButton});
+
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -329,28 +326,8 @@ public class MainMenu2 extends javax.swing.JDialog {
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel14.setText("Group:");
 
-        groupSpinner.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        groupSpinner.setModel(new javax.swing.SpinnerListModel(new String[] {"NORTH GROUP", "SOUTH GROUP", "WEST GROUP", "EAST GROUP", "REGIONAL GROUP"}));
-
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel19.setText("UID:");
-
-        UIDTextField.setFont(modelSpinner.getFont());
-
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel20.setText("Legit:");
-
-        legitCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                legitCheckBoxActionPerformed(evt);
-            }
-        });
-
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel21.setText("BDay:");
-
-        bdayTextField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0000"))));
-        bdayTextField.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        modelSpinner1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        modelSpinner1.setModel(new javax.swing.SpinnerListModel(new String[] {"North", "South", "East", "West", "Regional"}));
 
         javax.swing.GroupLayout RegMainLayout = new javax.swing.GroupLayout(RegMain);
         RegMain.setLayout(RegMainLayout);
@@ -359,9 +336,7 @@ public class MainMenu2 extends javax.swing.JDialog {
             .addGroup(RegMainLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RegMainLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1)
                     .addGroup(RegMainLayout.createSequentialGroup()
                         .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(RegMainLayout.createSequentialGroup()
@@ -383,59 +358,46 @@ public class MainMenu2 extends javax.swing.JDialog {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel14)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(groupSpinner))
+                                .addComponent(modelSpinner1))
                             .addGroup(RegMainLayout.createSequentialGroup()
                                 .addComponent(jLabel12)
                                 .addGap(18, 18, 18)
                                 .addComponent(companyTextField))
                             .addGroup(RegMainLayout.createSequentialGroup()
-                                .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegMainLayout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(emailTextField))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegMainLayout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(modelSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(26, 26, 26)
-                                        .addComponent(jLabel8)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(modelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(RegMainLayout.createSequentialGroup()
+                                        .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegMainLayout.createSequentialGroup()
+                                                .addComponent(jLabel5)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(emailTextField))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegMainLayout.createSequentialGroup()
+                                                .addComponent(jLabel7)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(modelSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(26, 26, 26)
+                                                .addComponent(jLabel8)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(modelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel9)
                                         .addGap(18, 18, 18)
-                                        .addComponent(colorTextField))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegMainLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel21)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(bdayTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel20)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(legitCheckBox)
-                                        .addGap(16, 16, 16))))
-                            .addGroup(RegMainLayout.createSequentialGroup()
-                                .addComponent(jLabel13)
-                                .addGap(18, 18, 18)
-                                .addComponent(contactTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel19)
-                                .addGap(18, 18, 18)
-                                .addComponent(UIDTextField))
-                            .addGroup(RegMainLayout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(18, 18, 18)
-                                .addComponent(occupationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel11)
-                                .addGap(18, 18, 18)
-                                .addComponent(schoolTextField)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(colorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(RegMainLayout.createSequentialGroup()
+                                        .addComponent(jLabel10)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(occupationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel11)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(schoolTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(RegMainLayout.createSequentialGroup()
+                                        .addComponent(jLabel13)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(contactTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         RegMainLayout.setVerticalGroup(
@@ -460,19 +422,13 @@ public class MainMenu2 extends javax.swing.JDialog {
                         .addGap(18, 18, 18)
                         .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel21)
-                                .addComponent(bdayTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel20)
-                                    .addComponent(legitCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(plateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14)
-                            .addComponent(groupSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(modelSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
@@ -494,10 +450,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                         .addGap(18, 18, 18)
                         .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
-                            .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(contactTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel19)
-                                .addComponent(UIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(contactTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(104, Short.MAX_VALUE))
         );
@@ -863,94 +816,18 @@ public class MainMenu2 extends javax.swing.JDialog {
                RegisterButton.setText("Register");
                UID = "";
                memberTable.clearSelection(); 
-               nameTextField.setText("");
-                        fbnameTextField.setText("");
-                        addressTextField.setText("");
-                        emailTextField.setText("");
-                        plateTextField.setText("");
-                        modelTextField.setText("");
-                        colorTextField.setText("");
-                        //add Remaining TextFields here
-                        occupationTextField.setText("");
-                            jLabel11.setVisible(false);
-                            schoolTextField.setVisible(false);
-                            jLabel12.setVisible(false);
-                            companyTextField.setVisible(false);
-                            schoolTextField.setText("");	
-                        contactTextField.setText("");
-                        UIDTextField.setText("");
-                        bdayTextField.setText("");
        }
     }//GEN-LAST:event_LoadButtonActionPerformed
 
-    
-    String query_update()
-    {
-        String final_query="";
-        
-        final_query +="ID = "+UIDTextField.getText()+", ";
-        final_query +="Groups = '"+groupSpinner.getValue()+"', ";
-        final_query +="Memebership = '"+member_legit+"', ";
-        final_query +="Name = '"+nameTextField.getText()+"', ";
-        final_query +="FB_Name = '"+fbnameTextField.getText()+"', ";
-        final_query +="Address = '"+addressTextField.getText()+"', ";
-        final_query +="Birthday = '"+bdayTextField.getText()+"', ";
-        final_query +="Email = '"+emailTextField.getText()+"', ";
-        final_query +="Plate = '"+plateTextField.getText()+"', ";
-        final_query +="Model = '"+modelSpinner.getValue()+"', ";
-        final_query +="ModelYear = '"+modelTextField.getText()+"', ";
-        final_query +="Color = '"+colorTextField.getText()+"', ";
-        final_query +="Occupation = '"+occupationTextField.getText()+"', ";
-        final_query +="School = '"+schoolTextField.getText()+"', ";
-        final_query +="Company = '"+companyTextField.getText()+"', ";
-        final_query +="Contact = '"+contactTextField.getText()+"' where ID = "+UID_1+";";
-        return final_query;
-    }
-    String insert_query()
-    {
-        String final_query="";
-        
-        final_query +=UIDTextField.getText()+", '";
-        final_query +=groupSpinner.getValue()+"', '";
-        final_query +=member_legit+"', '";
-        final_query +=nameTextField.getText()+"', '";
-        final_query +=fbnameTextField.getText()+"', '";
-        final_query +=addressTextField.getText()+"', '";
-        final_query +=bdayTextField.getText()+"', '";
-        final_query +=emailTextField.getText()+"', '";
-        final_query +=plateTextField.getText()+"', '";
-        final_query +=modelSpinner.getValue()+"', '";
-        final_query +=modelTextField.getText()+"', '";
-        final_query +=colorTextField.getText()+"', '";
-        final_query +=occupationTextField.getText()+"', '";
-        final_query +=schoolTextField.getText()+"', '";
-        final_query +=companyTextField.getText()+"', '";
-        final_query +=contactTextField.getText()+"');";
-        return final_query;
-    }
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
         // TODO add your handling code here:
         if(LoadButton.isSelected())
         {
-            SQLCommandsJava.update("update members set "+query_update());
-            String userStatement = "Select ID,Name From Members";
-			// Qualify that it is a SELECT statement.
-			if (userStatement.trim().toUpperCase().startsWith("SELECT"))
-			{
-				// Create a CoffeeDBQuery object for the query.
-                                LoadMemberEventList dbQuery = new LoadMemberEventList(userStatement);
-				// Get the column names.
-				String[] colNames = dbQuery.getColumnNames();
-				// Get the table data.
-				String[][] data = dbQuery.getTableData();
-				// Display the results in a table.
-                                DefaultTableModel model = new DefaultTableModel(data,colNames);
-                                memberTable.setModel(model);
-                        }
+            SQLCommandsJava.insert("Insert Query Here");
         }
         else
         {
-            SQLCommandsJava.insert("Insert into members values("+insert_query());
+            SQLCommandsJava.update("Insert Query Here");
         }
     }//GEN-LAST:event_RegisterButtonActionPerformed
 
@@ -992,7 +869,6 @@ public class MainMenu2 extends javax.swing.JDialog {
                EventLocation.setText(Location);
                 EventName.setEnabled(false);
                EventLocation.setEnabled(false);
-               CreateButton.setEnabled(false);
                    String userStatement = "Select * From "+EventName.getText();
 			// Qualify that it is a SELECT statement.
 			if (userStatement.trim().toUpperCase().startsWith("SELECT"))
@@ -1007,8 +883,6 @@ public class MainMenu2 extends javax.swing.JDialog {
                                 DefaultTableModel model = new DefaultTableModel(data,colNames);
                                 AttendList.setModel(model);
                         }
-            AttendRegister.count(EventName.getText());
-            Attendees.setText(""+AttendRegister.Count);
            }
            else
            {
@@ -1062,7 +936,7 @@ public class MainMenu2 extends javax.swing.JDialog {
     {
     ex.printStackTrace();
     }
-        Attendees.setText(""+AttendRegister.Count);
+        Attendees.setText(AttendRegister.Count);
             String userStatement = "Select * From "+EventName.getText();
 			// Qualify that it is a SELECT statement.
 			if (userStatement.trim().toUpperCase().startsWith("SELECT"))
@@ -1079,18 +953,6 @@ public class MainMenu2 extends javax.swing.JDialog {
                         }
                                
     }//GEN-LAST:event_jButton5ActionPerformed
-    String member_legit = "";
-    private void legitCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_legitCheckBoxActionPerformed
-        // TODO add your handling code here:
-        if(legitCheckBox.isSelected())
-        {
-            member_legit = "LEGIT Members";
-        }
-        else
-        {
-            member_legit = "NEWBIE";
-        }
-    }//GEN-LAST:event_legitCheckBoxActionPerformed
   Boolean homesel = false ,regsel = false,eventssel = false,printsel = false;
     /**
      * @param args the command line arguments
@@ -1133,7 +995,6 @@ public class MainMenu2 extends javax.swing.JDialog {
             }
         });
     }
-    int UID_1=0;
  public boolean Call(String UID) throws SQLException
 	{
              final String DB_URL = "jdbc:mysql://localhost:3306/teammap_db";
@@ -1146,54 +1007,21 @@ public class MainMenu2 extends javax.swing.JDialog {
 		// Send the SELECT statement to the DBMS.
 		ResultSet result = stmt.executeQuery(sqlStatement);
 		boolean UIDFound; // Flag
-               
-                String group, model,legit;
 		if (result.next())
 		{
-                    UID_1 = result.getInt("ID");
-                    model = result.getString("Model");
-                    group = result.getString("Groups");
-                        modelSpinner.setValue(model);
-                        groupSpinner.setValue(group);
 			// Display the product.
 			nameTextField.setText(result.getString("Name"));
                         fbnameTextField.setText(result.getString("FB_Name"));
                         addressTextField.setText(result.getString("Address"));
                         emailTextField.setText(result.getString("Email"));
-                        bdayTextField.setText(result.getString("Birthday"));
                         plateTextField.setText(result.getString("Plate"));
+                        //modelSpinner1.setValue(result.getString("Groups"));
+                       // modelSpinner.setValue(result.getString("Model"));
                         modelTextField.setText(result.getString("ModelYear"));
                         colorTextField.setText(result.getString("Color"));
-                        legit = result.getString("Memebership");
-                        if(legit.equals("LEGIT Members"))
-                        {
-                            legitCheckBox.setSelected(true);
-                        }
-                        else
-                        {
-                             legitCheckBox.setSelected(false);
-                        }
                         //add Remaining TextFields here
-                        occupationTextField.setText(result.getString("Occupation"));
-                        if(occupationTextField.getText().contains("Student")||occupationTextField.getText().contains("student"))
-                        {
-                            jLabel11.setVisible(true);
-                            schoolTextField.setVisible(true);
-                            jLabel12.setVisible(false);
-                            companyTextField.setVisible(false);
-                            schoolTextField.setText(result.getString("School"));
-                        }
-                        else
-                        {
-                            jLabel11.setVisible(false);
-                            schoolTextField.setVisible(false);
-                            jLabel12.setVisible(true);
-                            companyTextField.setVisible(true);
-                            companyTextField.setText(result.getString("Company"));
-                        }
+                       
 			
-                        contactTextField.setText(result.getString("Contact"));
-                        UIDTextField.setText(result.getString("ID"));
 			UIDFound = true;
 		}
 		else
@@ -1224,15 +1052,12 @@ public class MainMenu2 extends javax.swing.JDialog {
     private javax.swing.JPanel RegisterPanel;
     private javax.swing.ButtonGroup SidePanel;
     private javax.swing.JTextField UIDBox;
-    private javax.swing.JTextField UIDTextField;
     private javax.swing.JTextField addressTextField;
-    private javax.swing.JFormattedTextField bdayTextField;
     private javax.swing.JTextField colorTextField;
     private javax.swing.JTextField companyTextField;
     private javax.swing.JTextField contactTextField;
     private javax.swing.JTextField emailTextField;
     private javax.swing.JTextField fbnameTextField;
-    private javax.swing.JSpinner groupSpinner;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
@@ -1245,10 +1070,7 @@ public class MainMenu2 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1267,9 +1089,9 @@ public class MainMenu2 extends javax.swing.JDialog {
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;
-    private javax.swing.JCheckBox legitCheckBox;
     private javax.swing.JTable memberTable;
     private javax.swing.JSpinner modelSpinner;
+    private javax.swing.JSpinner modelSpinner1;
     private javax.swing.JFormattedTextField modelTextField;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField occupationTextField;
