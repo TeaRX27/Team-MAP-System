@@ -127,6 +127,7 @@ public class MainMenu2 extends javax.swing.JDialog {
             }
         });
 
+        jSplitPane1.setBackground(new java.awt.Color(0, 0, 0));
         jSplitPane1.setDividerSize(0);
         jSplitPane1.setPreferredSize(new java.awt.Dimension(900, 600));
 
@@ -185,6 +186,7 @@ public class MainMenu2 extends javax.swing.JDialog {
 
         MainPanel.setLayout(new java.awt.CardLayout());
 
+        RegMain.setBackground(new java.awt.Color(0, 0, 0));
         RegMain.setFocusable(false);
         RegMain.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
@@ -196,30 +198,38 @@ public class MainMenu2 extends javax.swing.JDialog {
         memberTable.getTableHeader().setReorderingAllowed(false);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Facebook Name:");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Name:");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Address:");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Email Address:");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Plate Number:");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Model:");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Model Year:");
 
         modelSpinner.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         modelSpinner.setModel(new javax.swing.SpinnerListModel(new String[] {"GX", "GLX", "GLS Sport", "Super Sport"}));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Color:");
 
         modelTextField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0000"))));
@@ -238,6 +248,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         plateTextField.setFont(modelSpinner.getFont());
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Occupation:");
 
         occupationTextField.setFont(modelSpinner.getFont());
@@ -248,6 +259,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         });
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("School (if Student):");
 
         schoolTextField.setFont(modelSpinner.getFont());
@@ -255,12 +267,15 @@ public class MainMenu2 extends javax.swing.JDialog {
         companyTextField.setFont(modelSpinner.getFont());
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Company:");
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel13.setText("Contact Number:");
 
         contactTextField.setFont(modelSpinner.getFont());
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         RegisterButton.setText("Register");
         RegisterButton.addActionListener(new java.awt.event.ActionListener() {
@@ -308,6 +323,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {ClearButton, LoadButton, RegisterButton});
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Group:");
 
         modelSpinner1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -399,7 +415,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                         .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(fbnameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(addressTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -441,6 +457,7 @@ public class MainMenu2 extends javax.swing.JDialog {
 
         MainPanel.add(RegMain, "card3");
 
+        EventMain.setBackground(new java.awt.Color(0, 0, 0));
         EventMain.setMaximumSize(new java.awt.Dimension(856, 766));
         EventMain.setPreferredSize(new java.awt.Dimension(856, 766));
 
@@ -475,10 +492,12 @@ public class MainMenu2 extends javax.swing.JDialog {
             }
         });
 
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setMaximumSize(new java.awt.Dimension(427, 494));
         jPanel2.setMinimumSize(new java.awt.Dimension(427, 494));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Event Name:");
 
         EventName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -494,6 +513,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         });
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Event Location:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -510,7 +530,7 @@ public class MainMenu2 extends javax.swing.JDialog {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(147, 147, 147)
                 .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(47, 47, 47)
@@ -536,6 +556,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.setMaximumSize(new java.awt.Dimension(391, 494));
         jPanel4.setMinimumSize(new java.awt.Dimension(391, 494));
 
@@ -561,9 +582,15 @@ public class MainMenu2 extends javax.swing.JDialog {
         Attendees.setText("0");
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("UID:");
 
         UIDBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        UIDBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UIDBoxActionPerformed(evt);
+            }
+        });
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton5.setText("Register");
@@ -629,7 +656,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(EventMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(EventMainLayout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 824, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -637,7 +664,7 @@ public class MainMenu2 extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EventMainLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(LoadEventButton, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
                 .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(164, 164, 164)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -660,6 +687,8 @@ public class MainMenu2 extends javax.swing.JDialog {
         );
 
         MainPanel.add(EventMain, "card4");
+
+        HomeMain.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setText("ALAY");
 
@@ -698,6 +727,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         // TODO add your handling code here:
         MainPanel.removeAll();
@@ -950,6 +980,10 @@ public class MainMenu2 extends javax.swing.JDialog {
                         }
                                
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void UIDBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UIDBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UIDBoxActionPerformed
   Boolean homesel = false ,regsel = false,eventssel = false,printsel = false;
     /**
      * @param args the command line arguments
