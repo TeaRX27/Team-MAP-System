@@ -188,10 +188,11 @@ public class MainMenu2 extends javax.swing.JDialog {
 
         jSplitPane1.setLeftComponent(jPanel3);
 
-        MainPanel.setMaximumSize(new java.awt.Dimension(856, 768));
+        MainPanel.setMaximumSize(new java.awt.Dimension(1097, 768));
         MainPanel.setPreferredSize(new java.awt.Dimension(856, 768));
         MainPanel.setLayout(new java.awt.CardLayout());
 
+        RegMain.setBackground(new java.awt.Color(0, 0, 0));
         RegMain.setFocusable(false);
         RegMain.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
@@ -203,30 +204,38 @@ public class MainMenu2 extends javax.swing.JDialog {
         memberTable.getTableHeader().setReorderingAllowed(false);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Facebook Name:");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Name:");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Address:");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Email Address:");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Plate Number:");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Model:");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Model Year:");
 
         modelSpinner.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         modelSpinner.setModel(new javax.swing.SpinnerListModel(new String[] {"GX", "GLX", "GLS Sport", "Super Sport"}));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Color:");
 
         modelTextField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0000"))));
@@ -245,6 +254,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         plateTextField.setFont(modelSpinner.getFont());
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Occupation:");
 
         occupationTextField.setFont(modelSpinner.getFont());
@@ -255,6 +265,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         });
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("School (if Student):");
 
         schoolTextField.setFont(modelSpinner.getFont());
@@ -262,9 +273,11 @@ public class MainMenu2 extends javax.swing.JDialog {
         companyTextField.setFont(modelSpinner.getFont());
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Company:");
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Contact Number:");
 
         contactTextField.setFont(modelSpinner.getFont());
@@ -304,6 +317,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         jPanel1.add(RegPrintButton);
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Group:");
 
         modelSpinner1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -375,9 +389,9 @@ public class MainMenu2 extends javax.swing.JDialog {
                                         .addComponent(jLabel13)
                                         .addGap(18, 18, 18)
                                         .addComponent(contactTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 249, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         RegMainLayout.setVerticalGroup(
@@ -409,7 +423,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                             .addComponent(plateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14)
                             .addComponent(modelSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(RegMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
                             .addComponent(jLabel8)
@@ -437,6 +451,7 @@ public class MainMenu2 extends javax.swing.JDialog {
 
         MainPanel.add(RegMain, "card3");
 
+        EventMain.setBackground(new java.awt.Color(0, 0, 0));
         EventMain.setMaximumSize(new java.awt.Dimension(856, 766));
         EventMain.setPreferredSize(new java.awt.Dimension(856, 768));
 
@@ -471,10 +486,12 @@ public class MainMenu2 extends javax.swing.JDialog {
             }
         });
 
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setMaximumSize(new java.awt.Dimension(427, 494));
         jPanel2.setMinimumSize(new java.awt.Dimension(427, 494));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Event Name:");
 
         EventName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -490,6 +507,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         });
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Event Location:");
 
         EventPrintButton.setFont(CreateButton.getFont());
@@ -510,7 +528,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 259, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(EventPrintButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -538,7 +556,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(EventPrintButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(184, 184, 184)
@@ -546,6 +564,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.setMaximumSize(new java.awt.Dimension(391, 494));
         jPanel4.setMinimumSize(new java.awt.Dimension(391, 494));
 
@@ -565,12 +584,15 @@ public class MainMenu2 extends javax.swing.JDialog {
         memberTable.getTableHeader().setReorderingAllowed(false);
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Total Attendees:");
 
         Attendees.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Attendees.setForeground(new java.awt.Color(255, 255, 255));
         Attendees.setText("0");
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("UID:");
 
         UIDBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -612,7 +634,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addContainerGap(43, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
                     .addComponent(UIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -643,7 +665,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                 .addComponent(LoadEventButton, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(234, 234, 234)
                 .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48))
             .addGroup(EventMainLayout.createSequentialGroup()
@@ -653,8 +675,7 @@ public class MainMenu2 extends javax.swing.JDialog {
                     .addGroup(EventMainLayout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 114, Short.MAX_VALUE)))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         EventMainLayout.setVerticalGroup(
@@ -677,27 +698,16 @@ public class MainMenu2 extends javax.swing.JDialog {
 
         HomeMain.setMaximumSize(new java.awt.Dimension(856, 768));
         HomeMain.setPreferredSize(new java.awt.Dimension(856, 768));
+        HomeMain.setLayout(new java.awt.CardLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/team_map_system/HomeImage.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\XCree\\OneDrive\\Pictures\\Camera Roll\\HomeImage.jpg")); // NOI18N
         jLabel1.setToolTipText("");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.setIconTextGap(0);
-        jLabel1.setMaximumSize(new java.awt.Dimension(856, 768));
-        jLabel1.setPreferredSize(new java.awt.Dimension(856, 768));
-
-        javax.swing.GroupLayout HomeMainLayout = new javax.swing.GroupLayout(HomeMain);
-        HomeMain.setLayout(HomeMainLayout);
-        HomeMainLayout.setHorizontalGroup(
-            HomeMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeMainLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1097, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        HomeMainLayout.setVerticalGroup(
-            HomeMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeMainLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jLabel1.setMaximumSize(new java.awt.Dimension(1166, 768));
+        jLabel1.setMinimumSize(new java.awt.Dimension(1166, 768));
+        jLabel1.setPreferredSize(new java.awt.Dimension(1166, 768));
+        HomeMain.add(jLabel1, "card2");
 
         MainPanel.add(HomeMain, "card2");
 
