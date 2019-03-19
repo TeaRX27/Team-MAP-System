@@ -17,7 +17,8 @@ import javax.swing.JOptionPane;
  * @author XCree
  */
 public class AttendRegister {
- public static String ID,Name,Group,Count,Event;
+ public static String ID,Name,Group,Event;
+ public static int Count;
 public static boolean Call(String UID,String Event) throws SQLException
 	{
            
@@ -43,7 +44,7 @@ public static boolean Call(String UID,String Event) throws SQLException
 			// Indicate the product was not found.
 			UIDFound = false;
 		}
-                count(Event);
+                
                 if(UIDFound)
                 {
                 insert("Insert into `"+Event+"` Values ('"+ID+"','"+Name+"','"+Group+"');");
@@ -52,6 +53,7 @@ public static boolean Call(String UID,String Event) throws SQLException
                 {
                     JOptionPane.showMessageDialog(null,"UID Not Found");
                 }
+                count(Event);
 		return UIDFound;
 	}
 public static void insert(String Query)
@@ -90,7 +92,7 @@ public static void count(String event)
 			ResultSet result = stmt.executeQuery(sqlStatement);
 		if (result.next())
 		{
-                    Count = result.getString(1);
+                    Count = result.getInt(1);
 		}
 		}
 		catch(Exception ex)

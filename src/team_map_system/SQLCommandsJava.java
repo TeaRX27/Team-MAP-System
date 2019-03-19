@@ -1,6 +1,7 @@
 package team_map_system;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -50,7 +51,7 @@ public class SQLCommandsJava {
 		}
 		catch(Exception ex)
 		{
-			System.out.println("ERROR: " + ex.getMessage());
+			JOptionPane.showMessageDialog(null, ex.getMessage());
 		}
   }
   public static void update(String Query)
@@ -72,7 +73,7 @@ public class SQLCommandsJava {
 		}
 		catch(Exception ex)
 		{
-			System.out.println("ERROR: " + ex.getMessage());
+			JOptionPane.showMessageDialog(null, ex.getMessage());
 		}
   }
   public static void CreateEvent(String EventName)
@@ -93,7 +94,7 @@ public class SQLCommandsJava {
 		}
 		catch (SQLException ex)
 		{
-			System.out.println("ERROR: " + ex.getMessage());
+			JOptionPane.showMessageDialog(null, ex.getMessage());
 		}
 	}
    public static void delete(String Query)
@@ -115,7 +116,7 @@ public class SQLCommandsJava {
 		}
 		catch(Exception ex)
 		{
-			System.out.println("ERROR: " + ex.getMessage());
+			JOptionPane.showMessageDialog(null, ex.getMessage());
 		}
   }
       public static void dropevent(String Query)
@@ -136,7 +137,7 @@ public class SQLCommandsJava {
 		}
 		catch(Exception ex)
 		{
-			System.out.println("ERROR: " + ex.getMessage());
+			JOptionPane.showMessageDialog(null, ex.getMessage());
 		}
   }
       public static void Attend(String Query)
@@ -158,7 +159,7 @@ public class SQLCommandsJava {
 		}
 		catch(Exception ex)
 		{
-			System.out.println("ERROR: " + ex.getMessage());
+			JOptionPane.showMessageDialog(null, ex.getMessage());
 		}
   
 }

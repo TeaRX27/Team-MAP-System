@@ -5,6 +5,7 @@
  */
 package team_map_system;
 import java.sql.*;
+import javax.swing.JOptionPane;
 /**
  *
  * @author XCree
@@ -76,8 +77,7 @@ public class LoadEventAttendance {
 		}
 		catch (Exception ex)
 		{
-			ex.printStackTrace();
-			System.exit(0);
+			JOptionPane.showMessageDialog(null, ex.getMessage());
 		}
 	}
 	/**

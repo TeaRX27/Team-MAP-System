@@ -11,6 +11,7 @@ package team_map_system;
  * @author XCree
  */
 import java.sql.*;
+import javax.swing.JOptionPane;
 public class LoadMemberEventList {
         public final String DB_URL = "jdbc:mysql://localhost:3306/teammap_db";
 	private Connection conn;     // Database connection
@@ -78,8 +79,8 @@ public class LoadMemberEventList {
 		}
 		catch (Exception ex)
 		{
-			ex.printStackTrace();
-			System.exit(0);
+			JOptionPane.showMessageDialog(null, ex.getMessage());
+			
 		}
 	}
 	/**
