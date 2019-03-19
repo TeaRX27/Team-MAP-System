@@ -495,6 +495,11 @@ public class MainMenu2 extends javax.swing.JDialog {
         jLabel15.setText("Event Name:");
 
         EventName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EventName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EventNameActionPerformed(evt);
+            }
+        });
 
         EventLocation.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
@@ -700,7 +705,7 @@ public class MainMenu2 extends javax.swing.JDialog {
         HomeMain.setPreferredSize(new java.awt.Dimension(856, 768));
         HomeMain.setLayout(new java.awt.CardLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\XCree\\OneDrive\\Pictures\\Camera Roll\\HomeImage.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/team_map_system/HomeImage.jpg"))); // NOI18N
         jLabel1.setToolTipText("");
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.setIconTextGap(0);
@@ -1014,6 +1019,10 @@ public class MainMenu2 extends javax.swing.JDialog {
     private void ClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ClearButtonActionPerformed
+
+    private void EventNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EventNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EventNameActionPerformed
   Boolean homesel = false ,regsel = false,eventssel = false,printsel = false;
     /**
      * @param args the command line arguments
